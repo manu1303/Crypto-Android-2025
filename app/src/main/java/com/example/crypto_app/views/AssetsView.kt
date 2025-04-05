@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import com.example.crypto_app.models.Asset
-
+import androidx.compose.ui.text.TextStyle
 
 @Composable
 fun AssetRow(asset: Asset){
@@ -43,13 +43,13 @@ fun AssetRow(asset: Asset){
         )
 
         Column {
-            Text(
+            Text (
                 text = asset.symbol,
-                fontSize = 18.dp
+                fontSize = 18.sp
             )
-            Text(
+            Text (
                 text = asset.name,
-                fontSize = 14.dp
+                fontSize = 14.sp
             )
         }
 
