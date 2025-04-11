@@ -1,6 +1,4 @@
-package com.example.crypto_app.models
-
-import android.health.connect.datatypes.units.Percentage
+package com.example.coincapapp.models
 
 data class Asset(
     val id: String,

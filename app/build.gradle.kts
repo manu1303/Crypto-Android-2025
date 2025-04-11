@@ -4,14 +4,15 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.example.crypto_app"
+    namespace = "com.example.coincapapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.crypto_app"
+        applicationId = "com.example.coincapapp"
         minSdk = 33
         targetSdk = 35
         versionCode = 1
@@ -55,11 +56,25 @@ dependencies {
     // Dependency Injection
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
 
-    // Sync Images
+    // Async images
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
 
+    // Ktor
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.ktor.client.cio)
+    implementation(libs.ktor.content.negotiation)
+
+    // Serialization
+    implementation(libs.kotlinx.serialization.json)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

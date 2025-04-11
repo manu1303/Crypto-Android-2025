@@ -1,4 +1,4 @@
-package com.example.crypto_app.ui.theme
+package com.example.coincapapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
